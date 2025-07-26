@@ -1,12 +1,13 @@
 name: Build host tools
 
 on:
+  workflow_dispatch:  # 有手动运行按钮
   pull_request:
     paths:
       - 'include/**'
       - 'tools/**'
       - '.github/workflows/tools.yml'
-  push:
+  push:               # 代码推送时触发
     paths:
       - 'include/**'
       - 'tools/**'
